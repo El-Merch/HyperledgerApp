@@ -1,0 +1,120 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .login-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .login-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .login-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .login-right img {
+    border-radius: 10px;
+  }
+  /* Logo */
+  .eco-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  /* Form */
+  .login-form {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 5px;
+  }
+  
+  .form-group span {
+    color: #ff3d00;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #d2cece;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  .password-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .password-container input {
+    flex: 1;
+  }
+  
+  .toggle-password {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px;
+    font-size: 18px;
+    color: #444;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, rgba(29, 166, 132, 1) 0%, rgba(190, 220, 124, 0.99) 100%);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .login-button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .login-container {
+      flex-direction: column;
+    }
+  
+    .login-left, .login-right {
+      flex: none;
+      width: 100%;
+    }
+  
+    .login-right {
+      height: 200px;
+    }
+  }
+  

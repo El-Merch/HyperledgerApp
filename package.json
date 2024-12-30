@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@grpc/grpc-js": "^1.12.5",
+    "fabric-ca-client": "^2.2.20",
+    "fabric-network": "^2.2.20",
+    "grpc": "^1.24.11",
+    "mysql2": "^3.12.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "web-vitals": "^4.2.4"
+  }
+}
