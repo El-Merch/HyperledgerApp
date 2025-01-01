@@ -1,0 +1,46 @@
+.Track {
+    font-family: Arial, sans-serif;
+    background-image: url('assets/FondoPrincipal.jpg');
+    background-size: cover;
+    color: #333;
+  }
+  
+  .Track-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .menu {
+    font-size: 1.2rem;
+  }
+  
+  .Track-content {
+    padding: 2rem;
+  }
+  
+  .status-section {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  
+  .items-section {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .item {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .Track-footer {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
