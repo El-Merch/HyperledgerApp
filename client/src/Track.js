@@ -21,7 +21,7 @@ const Track = () => {
           <ul className="timeline">
             <li>
               <div className="circle"></div>
-              <span>Recibido - 05/Enero/2025</span>
+              <span>Recibido</span>
             </li>
             <li>
               <div className="circle"></div>
