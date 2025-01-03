@@ -6,8 +6,11 @@ const Track = () => {
     <div className="track-container">
       {/* Header */}
       <header className="track-header">
-        <div className="menu">Menú</div>
-        <h1 className="title">Ecolistico</h1>
+        <div className="menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="#27ae60" d="M2 6a1 1 0 0 1 1-1h18a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1m0 6.032a1 1 0 0 1 1-1h18a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1m1 5.033a1 1 0 1 0 0 2h18a1 1 0 0 0 0-2z"/></svg>
+          <div className="menu-text">Menú</div>
+        </div>
+        <img src="/client/src/assets/eco-logo0.png" alt="Ecolistico"/> 
         <div className="user-info">
           <span>Isabela P.</span>
         </div>
@@ -53,8 +56,9 @@ const Track = () => {
 
       {/* Footer */}
       <footer className="track-footer">
-        <p>GreenChain 🥬</p>
-        <p>Versión 1.0 / Ecolistico 2025</p>
+        <p className="p-footer-title">GreenChain 🥬</p>
+        <p className="p-footer">Versión 1.0 / Ecolistico 2025</p>
+        <p className="p-footer">Todos los derechos reservados</p>
       </footer>
     </div>
   );
