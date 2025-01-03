@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 import "./Track_style.css";
+import logo from './assets/ecolistico_logo_sin_fondo.png';
 
 const Track = () => {
   const [loading, setLoading] = useState(false);
@@ -90,7 +91,7 @@ const Track = () => {
           </svg>
           <div className="menu-text">Menú</div>
         </div>
-        <img src="/client/src/assets/eco-logo0.png" alt="Ecolistico" />
+        <img src={logo} alt="Ecolistico" className="logo"/> 
         <div className="user-info">
           <span>Isabela P.</span>
         </div>

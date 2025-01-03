@@ -20,9 +20,10 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.title {
-  font-size: 1.8rem;
-  font-weight: bold;
+.logo {
+  height: 50px;
+  object-fit: contain;
+  margin: 0 auto;
 }
 
 .menu{
