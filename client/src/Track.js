@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Swal from "sweetalert2";
 import "./Track_style.css";
 import logo from './assets/ecolistico_logo_sin_fondo.png';
+import lechuga from './assets/lechuga.png'
+import papa from './assets/papa.png'
+
 
 const Track = () => {
   const [loading, setLoading] = useState(false);
@@ -124,13 +127,13 @@ const Track = () => {
         
         <section className="items-section">
           <div className="item-card" onClick={() => handleItemClick("Papa")}>
-            <img src="/assets/potato.png" alt="Papa" className="item-image" />
+            <img src={papa} alt="🥔" className="item-image" />
             <p className="item-name">Papa</p>
           </div>
           <div className="item-card" onClick={() => handleItemClick("Lechuga")}>
             <img
-              src="/assets/lettuce.png"
-              alt="Lechuga"
+              src={lechuga}
+              alt="🥬"
               className="item-image"
             />
             <p className="item-name">Lechuga</p>
