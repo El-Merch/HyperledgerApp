@@ -176,3 +176,28 @@
   font-weight: bold;
   color: #333;
 }
+
+.swal-timeline-container ul.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.swal-timeline-container ul.timeline li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.swal-timeline-container ul.timeline li .circle {
+  width: 10px;
+  height: 10px;
+  background-color: #27ae60;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.swal-timeline-container ul.timeline li div {
+  font-size: 14px;
+  line-height: 1.5;
+}

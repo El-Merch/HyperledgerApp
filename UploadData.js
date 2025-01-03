@@ -44,7 +44,7 @@ const main = async () => {
                 console.log(`Subiendo pedido con ID: ${order.id}`);
                 await contract.submitTransaction(
                     'CreateOrder',
-                    `order${order.id}`,
+                    `${order.id}`,
                     `${order.customer_id}`,
                     `${order.total_price}`,
                     `${order.status}`
