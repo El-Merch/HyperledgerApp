@@ -1,6 +1,7 @@
 import React from "react";
 import Swal from "sweetalert2";
 import "./Track_style.css";
+import logo from './assets/ecolistico_logo_sin_fondo.png';
 
 const Track = () => {
   // Maneja el evento de clic en un item-card
@@ -21,7 +22,7 @@ const Track = () => {
           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="#27ae60" d="M2 6a1 1 0 0 1 1-1h18a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1m0 6.032a1 1 0 0 1 1-1h18a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1m1 5.033a1 1 0 1 0 0 2h18a1 1 0 0 0 0-2z"/></svg>
           <div className="menu-text">Menú</div>
         </div>
-        <img src="/client/src/assets/eco-logo0.png" alt="Ecolistico"/> 
+        <img src={logo} alt="Ecolistico" className="logo"/> 
         <div className="user-info">
           <span>Isabela P.</span>
         </div>
