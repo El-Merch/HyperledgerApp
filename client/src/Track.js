@@ -1,7 +1,18 @@
 import React from "react";
+import Swal from "sweetalert2";
 import "./Track_style.css";
 
 const Track = () => {
+  // Maneja el evento de clic en un item-card
+  const handleItemClick = (itemName) => {
+    Swal.fire({
+      title: `Detalles de ${itemName}`,
+      text: `Aquí podrías mostrar información adicional sobre ${itemName}.`,
+      icon: "info",
+      confirmButtonText: "Cerrar",
+    });
+  };
+
   return (
     <div className="track-container">
       {/* Header */}
@@ -40,11 +51,17 @@ const Track = () => {
 
         {/* Items Section */}
         <section className="items-section">
-          <div className="item-card">
+          <div
+            className="item-card"
+            onClick={() => handleItemClick("Papa")}
+          >
             <img src="/assets/potato.png" alt="Papa" className="item-image" />
             <p className="item-name">Papa</p>
           </div>
-          <div className="item-card">
+          <div
+            className="item-card"
+            onClick={() => handleItemClick("Lechuga")}
+          >
             <img src="/assets/lettuce.png" alt="Lechuga" className="item-image" />
             <p className="item-name">Lechuga</p>
           </div>

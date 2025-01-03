@@ -8,7 +8,7 @@ En este caso se utilizara React ya que esta herramienta se utiliza en la infraes
 
 1. Instala las dependencias necesarias en la carpeta de HyperledgerApp:
    ```bash
-   npm install react react-dom web-vitals
+   npm install react react-dom web-vitals react-router-dom sweetalert2
    ```
 Esto para que asi podamos utilizar react y sus componentes.
 
