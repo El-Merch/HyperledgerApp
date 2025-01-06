@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 import "./Track_style.css";
+import "./Timeline_style.css"; // Nuevo archivo CSS para los estilos de la línea de tiempo
 import logo from './assets/ecolistico_logo_sin_fondo.png';
-import lechuga from './assets/lechuga.png'
-import papa from './assets/papa.png'
-
+import lechuga from './assets/lechuga.png';
+import papa from './assets/papa.png';
 
 const Track = () => {
   const [loading, setLoading] = useState(false);
@@ -12,7 +12,6 @@ const Track = () => {
   const handleItemClick = async (itemName) => {
     setLoading(true);
     try {
-      // Llamar al servidor para obtener los datos del trayecto
       const response = await fetch(
         `http://localhost:5000/api/food-track/${itemName}`
       );
@@ -22,39 +21,44 @@ const Track = () => {
 
       const data = await response.json();
 
-      // Crear el contenido de la línea de tiempo
       const productionTimeline = data.productionStats.map((stat, index) => `
         <div class="timeline-item">
-          <h4>Producción - Etapa ${index + 1}</h4>
-          <p><strong>Fecha:</strong> ${new Date(stat.datalogger_date).toLocaleString()}</p>
-          <p><strong>Valor del sensor:</strong> ${stat.datalogger_value}</p>
-          <p><strong>Intensidad de luz:</strong> ${stat.led_intensity} lux</p>
-          <p><strong>Temperatura:</strong> ${stat.env_temp} °C</p>
-          <p><strong>Humedad:</strong> ${stat.env_hum} %</p>
-          <p><strong>CO2:</strong> ${stat.env_co2} ppm</p>
-          <p><strong>Presión:</strong> ${stat.env_pressure} hPa</p>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h4>Producción - Etapa ${index + 1}</h4>
+            <p><strong>Fecha:</strong> ${new Date(stat.datalogger_date).toLocaleString()}</p>
+            <p><strong>Valor del sensor:</strong> ${stat.datalogger_value}</p>
+            <p><strong>Intensidad de luz:</strong> ${stat.led_intensity} lux</p>
+            <p><strong>Temperatura:</strong> ${stat.env_temp} °C</p>
+            <p><strong>Humedad:</strong> ${stat.env_hum} %</p>
+            <p><strong>CO2:</strong> ${stat.env_co2} ppm</p>
+            <p><strong>Presión:</strong> ${stat.env_pressure} hPa</p>
+          </div>
         </div>
       `).join("");
 
       const transportTimeline = data.transportConditions.map((condition, index) => `
         <div class="timeline-item">
-          <h4>Transporte - Punto ${index + 1}</h4>
-          <p><strong>Fecha y hora:</strong> ${new Date(condition.time_condition).toLocaleString()}</p>
-          <p><strong>Ubicación:</strong> ${condition.location}</p>
-          <p><strong>Temperatura:</strong> ${condition.temp} °C</p>
-          <p><strong>Humedad:</strong> ${condition.hum} %</p>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h4>Transporte - Punto ${index + 1}</h4>
+            <p><strong>Fecha y hora:</strong> ${new Date(condition.time_condition).toLocaleString()}</p>
+            <p><strong>Ubicación:</strong> ${condition.location}</p>
+            <p><strong>Temperatura:</strong> ${condition.temp} °C</p>
+            <p><strong>Humedad:</strong> ${condition.hum} %</p>
+          </div>
         </div>
       `).join("");
 
       const timelineContent = `
-        <h3>Producción</h3>
-        ${productionTimeline}
-
-        <h3>Transporte</h3>
-        ${transportTimeline}
+        <div class="timeline">
+          <h3>Producción</h3>
+          ${productionTimeline}
+          <h3>Transporte</h3>
+          ${transportTimeline}
+        </div>
       `;
 
-      // Mostrar los datos en un popup
       Swal.fire({
         title: `Línea de Tiempo de ${itemName}`,
         html: timelineContent,

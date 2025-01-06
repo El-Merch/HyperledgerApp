@@ -1,0 +1,57 @@
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #27ae60;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  
+  .timeline-content {
+    flex-grow: 1;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .timeline-content:hover {
+    background-color: #eafaf1; /* Cambia a un verde muy claro */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Sombra suave */
+    transform: translateY(-5px); /* Levanta un poco el elemento */
+    transition: all 0.3s ease-in-out; /* Transición suave */
+  }
+  
+  .timeline-content:hover h4 {
+    color: #1e8449; /* Oscurece el título al pasar el mouse */
+  }
+  
+  .timeline-content:hover p {
+    color: #2d3436; /* Oscurece los textos secundarios */
+  }
+  
+  .timeline-content h4 {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #27ae60;
+  }
+  
+  .timeline-content p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
