@@ -15,6 +15,25 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
+const users = [
+    {username: 'admin@hotmail.com', password: '1234'},
+    {username: 'admin', password: 'admin'}
+];
+
+app.post('/login', (req, res) => {
+    const { username, password } = req.body;
+
+    const user = users.find(
+        (u) => u.username === username && u.password === password
+    );
+
+    if (user) {
+        res.status(200).json({message: 'Login exitoso'});
+    } else {
+        res.status(401).json({message: 'Credenciales incorrectas'});
+    }
+});
+
 // Configuración de base de datos
 const dbConfig = {
     host: 'host.docker.internal',
